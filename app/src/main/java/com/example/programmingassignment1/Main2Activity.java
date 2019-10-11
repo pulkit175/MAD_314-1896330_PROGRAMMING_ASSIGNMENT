@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class Main2Activity extends AppCompatActivity {
     TextView textViewSum,textViewMultiply;
-    Button button;
+    Button button1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,12 +21,13 @@ public class Main2Activity extends AppCompatActivity {
 
         textViewSum=findViewById(R.id.sumTextView);
         textViewMultiply=findViewById(R.id.multiplyTextView);
+        button1=findViewById(R.id.button1);
         Intent intent=getIntent();
         String text1=intent.getStringExtra("sumstring");
         textViewSum.setText(text1);
         String text2=intent.getStringExtra("multiplystring");
         textViewMultiply.setText(text2);
-        button.setOnClickListener(new View.OnClickListener() {
+        button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent1=new Intent(Main2Activity.this,MainActivity.class);
